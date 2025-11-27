@@ -1,0 +1,86 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CINERATE</title>
+    <link rel="stylesheet" href="./assets/style/style.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    
+  <!-- Navbar -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/image/logo.png" alt="CINERATE Logo">
+      </a>
+    </div>
+
+  
+    <div class="nav-buttons" id="nav-buttons">
+      <a class="btn sign-in" href="./pages/login.php">SIGN IN</a>
+      <a class="btn register" href="./pages/register.php">REGISTER</a>
+    </div>
+  </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="overlay"></div>
+      <div class="hero-content">  
+        <div class="movie-info">
+          <h1 id="movie-title">Avatar</h1>
+          <p><strong>Title:</strong> <span id="movie-full-title">Avatar Fire and Ash</span></p>
+          <p><strong>Genre:</strong> <span id="movie-genre">Epic Science Fiction / Action-Adventure / Fantasy</span></p>
+          <p><strong>Wikipedia:</strong> 
+            <a id="wiki-link" href="https://en.wikipedia.org/wiki/Avatar_(2009_film)" target="_blank" rel="noopener noreferrer">Wikipedia.com/Avatar</a>
+          </p>
+          <p><strong>Release Date:</strong> <span id="movie-date">December 19, 2025</span></p>
+        </div>
+
+        <!-- Carousel -->
+        <div class="carousel">
+          <div class="carousel-track">
+            <img src="assets/image/avatar thumbnail.png"
+                class="carousel-item active"
+                data-title="Avatar"
+                data-fulltitle="Avatar Fire and Ash"
+                data-genre="Epic Science Fiction / Action-Adventure / Fantasy"
+                data-wiki="https://en.wikipedia.org/wiki/Avatar_(2009_film)"
+                data-date="December 19, 2025"
+                data-bg="assets/image/avatarbg.png">
+
+            <img src="assets/image/interstellar thumbnail.png"
+                class="carousel-item"
+                data-title="Interstellar"
+                data-fulltitle="Interstellar: Beyond the Stars"
+                data-genre="Sci-Fi / Drama / Adventure"
+                data-wiki="https://en.wikipedia.org/wiki/Interstellar_(film)"
+                data-date="November 7, 2014"
+                data-bg="assets/image/interstellarbg.png">
+
+            <img src="assets/image/mzthumbnail.png"
+                class="carousel-item"
+                data-title="Maze Runner"
+                data-fulltitle="Maze Runner: The Death Cure"
+                data-genre="Action / Sci-Fi / Thriller"
+                data-wiki="https://en.wikipedia.org/wiki/Maze_Runner:_The_Death_Cure"
+                data-date="January 26, 2018"
+                data-bg="assets/image/mzbg.png">
+          </div>
+
+          <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./js/corousel.js" defer></script>
+    <script src="./js/icons.js" defer></script>
+  </body>
+  </html>
+

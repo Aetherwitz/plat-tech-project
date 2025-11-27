@@ -1,0 +1,331 @@
+/* Top Red Banner */
+.top-banner {
+  background: #d93a3a;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.top-banner h2 {
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.top-banner span {
+  color: #ffcd3c;
+}
+
+.top-banner p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Split Layout */
+.signin-container {
+  flex: 1;
+  display: flex;
+  flex-wrap: nowrap;     
+}
+
+/* Left Side */
+.left-side {
+  flex: 1;
+  position: relative;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 300px;
+  min-height: 100vh;
+}
+
+.left-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.logo-text {
+  position: absolute;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ff3c3c;
+  bottom: 40px;
+  left: 40px;
+  text-shadow: 2px 2px 10px black;
+}
+
+.right-side {
+  position: relative;
+  flex: 1;
+  background: #111;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;     
+  min-width: 350px;
+  min-height: 100vh;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  gap: 8px;
+  padding: 12px 18px;      
+  font-size: 1.1rem;       
+  font-weight: 800;        
+  color: #ffffff;
+  background: #00000040; 
+  border-radius: 8px;     
+  text-decoration: none;
+  box-shadow: 0 6px 18px #00000080;
+  transition: transform 0.12s ease, background 0.12s ease;
+}
+
+.form-header {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.back-btn {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.right-side h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+ justify-content: center;
+}
+
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 420px; 
+}
+
+.signin-form label {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.signin-form input {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 15px;
+  background: #222;
+  color: white;
+}
+
+.signin-form input:focus {
+  outline: 2px solid #ff3c3c;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.options a {
+  color: #ffcd3c;
+  text-decoration: none;
+}
+
+.signin-btn {
+  background: #d93a3a;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.signin-btn:hover {
+  background: #ff4f4f;
+}
+
+.signup-text {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.signup-text a {
+  color: #ffcd3c;
+  text-decoration: none;
+}
+
+.divider {
+  text-align: center;
+  margin: 20px 0 10px;
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+/* Social Buttons */
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-buttons button {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.social-buttons button:hover {
+  transform: scale(1.1);
+}
+
+.google {
+  background: white;
+  color: #db4437;
+}
+
+.facebook {
+  background: #3b5998;
+  color: white;
+}
+
+/* Responsive */
+/************** LARGE TABLETS & SMALL LAPTOPS **************/
+@media (max-width: 1024px) {
+  .right-side {
+    padding: 40px 25px;
+  }
+
+  .logo-text {
+    font-size: 2.4rem;
+    bottom: 25px;
+    left: 25px;
+  }
+
+  .right-side h2 {
+    font-size: 1.7rem;
+  }
+}
+
+/************** TABLETS **************/
+@media (max-width: 900px) {
+  .signin-container {
+    flex-direction: column;
+  }
+
+  .left-side,
+  .right-side {
+    min-height: 50vh;
+    width: 100%;
+  }
+
+  .left-side img {
+    object-position: center;
+  }
+
+  .logo-text {
+    font-size: 2rem;
+  }
+
+  .right-side {
+    padding: 30px 20px;
+  }
+
+  .signin-form {
+    max-width: 100%;
+  }
+}
+
+/************** MOBILE PHONES **************/
+@media (max-width: 600px) {
+  .top-banner h2 {
+    font-size: 1.4rem;
+  }
+
+  .top-banner p {
+    font-size: 0.8rem;
+  }
+
+  .logo-text {
+    font-size: 1.6rem;
+    bottom: 15px;
+    left: 15px;
+  }
+
+  .right-side {
+    padding: 25px 15px;
+    min-height: auto;
+  }
+
+  .right-side h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .signin-form label {
+    font-size: 0.85rem;
+  }
+
+  .signin-form input {
+    font-size: 0.9rem;
+    padding: 9px;
+  }
+
+  .options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .signin-btn {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+
+  .social-buttons {
+    gap: 12px;
+  }
+
+  .social-buttons button {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .back-button {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+/************** EXTRA SMALL DEVICES **************/
+@media (max-width: 400px) {
+  .top-banner {
+    padding: 15px 8px;
+  }
+
+  .top-banner h2 {
+    font-size: 1.2rem;
+  }
+
+  .signup-text {
+    font-size: 0.8rem;
+  }
+}

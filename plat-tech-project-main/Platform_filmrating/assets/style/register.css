@@ -1,0 +1,267 @@
+/* Top Red Banner */
+.top-banner {
+  background: #d93a3a;
+  text-align: center;
+  padding: 18px 10px;
+}
+.top-banner h2 { font-size: 1.8rem; color: #fff; margin:0; }
+.top-banner span { color: #ffcd3c; }
+.top-banner p { margin:6px 0 0; font-size:0.95rem; color:#fff; opacity:0.95; }
+
+/* base full height */
+html,body { height:100%; margin:0; font-family: Arial, Helvetica, sans-serif; background:#0f0f0f; color:#fff; }
+
+/* Split Layout */
+.signin-container {
+  display:flex;
+  min-height: calc(100vh - 72px); 
+}
+
+/* Left poster */
+.left-side {
+  flex:1;
+  min-width:300px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  background:#111;
+}
+.left-side img { width:100%; height:100%; object-fit:cover; opacity:0.85; display:block; }
+.logo-text {
+  position:absolute;
+  font-size:5rem;
+  font-weight:900;
+  color:#e23b3b;
+  text-shadow:0 6px 30px rgba(0,0,0,0.7);
+  letter-spacing:6px;
+}
+
+/* Right panel (form) */
+.right-side {
+  flex:1;
+  min-width:360px;
+  padding:56px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;     
+  background:#111;
+}
+
+/* header and back */
+.form-header { width:100%; display:flex; flex-direction:column; align-items:center; margin-bottom:20px; }
+.back-btn { align-self:flex-start; color:#ccc; text-decoration:none; font-weight:700; margin-bottom:14px; }
+.right-side h2 { margin:0 0 10px; font-size:1.9rem; color:#fff; text-align:center; }
+
+/* form */
+.signin-form {
+  width:100%;
+  max-width:460px;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+}
+.signin-form label { margin-bottom:8px; font-size:0.95rem; color:#ddd; }
+.signin-form input, .signin-form select {
+  background:#222;
+  color:#fff;
+  border:none;
+  padding:12px 14px;
+  border-radius:8px;
+  margin-bottom:14px;
+  box-sizing:border-box;
+  outline:none;
+}
+.signin-form input:focus, .signin-form select:focus { outline:2px solid rgba(217,58,58,0.9); }
+
+.birthdate { display:flex; gap:12px; margin-bottom:14px; }
+.birthdate select { flex:1; }
+
+/* terms */
+.terms { display:flex; gap:10px; align-items:flex-start; font-size:0.85rem; color:#ddd; margin-bottom:18px; }
+.terms input { width:16px; height:16px; transform:translateY(2px); }
+
+/* button */
+.signin-btn { background:#d93a3a; color:#fff; border:none; padding:12px; border-radius:8px; font-weight:700; cursor:pointer; transition:background .2s; }
+.signin-btn:hover { background:#ff4f4f; }
+
+/* misc */
+.signup-text { text-align:center; margin-top:12px; color:#fff; }
+.signup-text a { color:#ffcd3c; text-decoration:none; font-weight:700; }
+
+.divider { text-align:center; margin:18px 0 6px; color:#ddd; opacity:0.9; }
+
+.social-buttons { display:flex; gap:14px; justify-content:center; margin-top:6px; }
+.social-buttons button { width:46px; height:46px; border-radius:50%; border:none; cursor:pointer; font-weight:700; }
+.social-buttons .google { background:#fff; color:#c33; }
+.social-buttons .facebook { background:#3b5998; color:#fff; }
+
+/* responsive */
+@media (max-width:900px) {
+  .signin-container { flex-direction:column; }
+  .left-side, .right-side { width:100%; height:50vh; min-height:240px; }
+  .right-side { padding:28px; }
+  .logo-text { font-size:3.6rem; left:20px; bottom:30px; }
+}
+
+/* ===== RESPONSIVE UPGRADES ===== */
+
+/* Large Tablets / Small Laptops */
+@media (max-width: 900px) {
+  .signin-container {
+    flex-direction: column;
+  }
+
+  .left-side,
+  .right-side {
+    width: 100%;
+    height: 50vh;
+    min-height: 240px;
+  }
+
+  .right-side {
+    padding: 28px;
+  }
+
+  .logo-text {
+    font-size: 3.6rem;
+    left: 20px;
+    bottom: 30px;
+  }
+
+  .signin-form {
+    max-width: 90%;
+  }
+
+  .signin-form input,
+  .signin-form select {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+
+  .signin-btn {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  .social-buttons button {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  .left-side {
+    height: 40vh;
+  }
+
+  .right-side {
+    padding: 20px;
+  }
+
+  .logo-text {
+    font-size: 3rem;
+    left: 15px;
+    bottom: 25px;
+  }
+
+  .signin-form label {
+    font-size: 0.85rem;
+  }
+
+  .birthdate select {
+    font-size: 0.85rem;
+  }
+
+  .terms {
+    font-size: 0.8rem;
+  }
+
+  .signin-btn {
+    font-size: 0.9rem;
+  }
+
+  .divider {
+    font-size: 0.85rem;
+  }
+}
+
+/* Mobile Phones (480px and below) */
+@media (max-width: 480px) {
+  .left-side {
+    height: 30vh;
+  }
+
+  .right-side {
+    padding: 15px;
+  }
+
+  .logo-text {
+    font-size: 2.2rem;
+    left: 10px;
+    bottom: 15px;
+  }
+
+  .right-side h2 {
+    font-size: 1.5rem;
+  }
+
+  .signin-form input,
+  .signin-form select {
+    padding: 8px 10px;
+    font-size: 0.8rem;
+  }
+
+  .birthdate select {
+    font-size: 0.8rem;
+  }
+
+  .terms {
+    font-size: 0.75rem;
+    gap: 8px;
+  }
+
+  .signin-btn {
+    padding: 10px;
+    font-size: 0.85rem;
+  }
+
+  .social-buttons {
+    gap: 10px;
+  }
+
+  .social-buttons button {
+    width: 36px;
+    height: 36px;
+  }
+
+  .signup-text {
+    font-size: 0.8rem;
+  }
+
+  .divider {
+    font-size: 0.75rem;
+  }
+}
+
+/* Extra Small Devices (360px and below) */
+@media (max-width: 360px) {
+  .logo-text {
+    font-size: 1.8rem;
+  }
+
+  .right-side h2 {
+    font-size: 1.3rem;
+  }
+
+  .signin-form input,
+  .signin-form select {
+    font-size: 0.75rem;
+  }
+
+  .signin-btn {
+    font-size: 0.8rem;
+  }
+}

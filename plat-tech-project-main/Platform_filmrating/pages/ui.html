@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CINERATE - UI MODE</title>
+
+  <link rel="stylesheet" href="../assets/style/style.css" />
+  <link rel="stylesheet" href="../assets/style/star-rating.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">
+    <a href="index.html">
+      <img src="../assets/image/logo.png" alt="CINERATE Logo">
+    </a>
+  </div>
+
+  <div class="search-container">
+    <input type="text" placeholder="Search" class="search-bar" />
+    <i class="fa fa-search search-icon"></i>
+  </div>
+
+  <!-- MENU BUTTON -->
+<div class="menu-container">
+  <button class="menu-btn">☰</button>
+
+  <ul class="menu-dropdown">
+    <li><a href="../pages/ui.html">Home</a></li>
+    <li><a href="favorites.html">My Favorites</a></li>
+    <li><a href="watchlist.html">Watchlist</a></li>
+    <li><a href="../index.html">Logout</a></li>
+  </ul>
+</div>
+
+
+  <!-- BURGER MENU -->
+  <div class="burger" id="burger">
+    <i class="fa fa-bars"></i>
+  </div>
+</nav>
+
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="overlay"></div>
+
+  <div class="hero-content">
+    <div class="movie-info">
+      <h1 id="movie-title">Avatar</h1>
+
+      <p><strong>Title:</strong> <span id="movie-full-title">Avatar Fire and Ash</span></p>
+      <p><strong>Genre:</strong> <span id="movie-genre">Epic Science Fiction / Action-Adventure / Fantasy</span></p>
+
+      <p><strong>Wikipedia:</strong>
+        <a id="wiki-link" href="https://en.wikipedia.org/wiki/Avatar_(2009_film)" target="_blank">
+          Wikipedia.com/Avatar
+        </a>
+      </p>
+
+      <p><strong>Release Date:</strong> <span id="movie-date">December 19, 2025</span></p>
+
+      <!-- Watchlist + Similar Movies -->
+      <div class="movie" data-id="movie_001" data-title="Avatar" data-genre="Epic Science Fiction / Action-Adventure / Fantasy">
+  <div class="icons">
+    <i id="watchlistBtn" class="fa fa-thumb-tack" title="Add to Watchlist">📌</i>
+    <i id="relatedBtn" class="fa fa-circle" title="Similar Movies">⨂</i>
+    
+  </div>
+</div>
+
+<div id="relatedMovies"></div>
+
+      <p id="movie-description" class="movie-description">A visually stunning sci-fi adventure about space exploration and the bonds that keep humanity together.</p>
+
+
+
+      <!-- ⭐ Rating -->
+      <div class="rating" aria-label="Movie rating">
+        <form class="rating-form" aria-label="Rate this movie">
+          <fieldset>
+            <legend class="visually-hidden">Rating</legend>
+            <input type="radio" id="star5" name="rating" value="5" />
+            <label for="star5" title="5 stars">★</label>
+
+            <input type="radio" id="star4" name="rating" value="4" />
+            <label for="star4" title="4 stars">★</label>
+
+            <input type="radio" id="star3" name="rating" value="3" />
+            <label for="star3" title="3 stars">★</label>
+
+            <input type="radio" id="star2" name="rating" value="2" />
+            <label for="star2" title="2 stars">★</label>
+
+            <input type="radio" id="star1" name="rating" value="1" />
+            <label for="star1" title="1 star">★</label>
+          </fieldset>
+          <button type="button" class="rate-btn">Rate</button>
+        </form>
+      </div>
+
+    </div>
+
+
+    <!-- CAROUSEL -->
+    <div class="carousel">
+      <div class="carousel-track">
+
+          <img src="../assets/image/avatar thumbnail.png"
+            class="carousel-item active"
+            data-id="movie_001"
+            data-title="Avatar"
+            data-fulltitle="Avatar Fire and Ash"
+            data-genre="Epic Science Fiction / Action-Adventure / Fantasy"
+            data-wiki="https://en.wikipedia.org/wiki/Avatar_(2009_film)"
+            data-date="December 19, 2025"
+            data-bg="../assets/image/avatarbg.png">
+
+
+        <img src="../assets/image/interstellar thumbnail.png"
+          class="carousel-item"
+          data-id="movie_002"
+          data-title="Interstellar"
+          data-fulltitle="Interstellar: Beyond the Stars"
+          data-genre="Sci-Fi / Drama / Adventure"
+          data-wiki="https://en.wikipedia.org/wiki/Interstellar_(film)"
+          data-date="November 7, 2014"
+          data-bg="../assets/image/interstellarbg.png">
+
+        <img src="../assets/image/mzthumbnail.png"
+          class="carousel-item"
+          data-id="movie_003"
+          data-title="Maze Runner"
+          data-fulltitle="Maze Runner: The Death Cure"
+          data-genre="Action / Sci-Fi / Thriller"
+          data-wiki="https://en.wikipedia.org/wiki/Maze_Runner:_The_Death_Cure"
+          data-date="January 26, 2018"
+          data-bg="../assets/image/mzbg.png">
+
+      </div>
+
+      <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script src="../js/corousel.js"></script>
+<script src="../js/icons.js"></script>
+<script src="../js/ui.js"></script>
+
+</body>
+</html>
